@@ -1,7 +1,7 @@
 FROM nginx
-MAINTAINER NeerajTiwari<neeraj_tiwar@yahoo.com>
+MAINTAINER NeerajTiwari
 ENV APP_PORT 80
-ARG file_name=./HelloWorld.html
+ARG file_name="helloWorld.html"
 RUN mkdir -p /usr/share/nginx/myapp/
 COPY ${file_name} /usr/share/nginx/myapp/index.html
 COPY nginx.conf /etc/nginx/nginx.conf
